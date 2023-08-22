@@ -57,9 +57,9 @@ for relatorio in relatorios:
         base_relatorios = pd.concat([base_relatorios, base_word(texto)], ignore_index=True)
     
     except:
-       dic_erro = {'PROCESSO':[relatorio]}
-       dados_erro = pd.DataFrame(dic_erro)
-       base_relatorios = pd.concat([base_relatorios, dados_erro], ignore_index=True)
+        dic_erro = {'PROCESSO':[relatorio]}
+        dados_erro = pd.DataFrame(dic_erro)
+        base_relatorios = pd.concat([base_relatorios, dados_erro], ignore_index=True)
 
 #removendo espaços e trocando caracters
 base_relatorios['RAP'] = base_relatorios['RAP'].replace({'R$':'',' ':'', ',':'.'}, regex = True)
