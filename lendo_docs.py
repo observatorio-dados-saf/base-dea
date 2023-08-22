@@ -53,7 +53,6 @@ for relatorio in relatorios:
         if '.docx' in relatorio:
             texto = docx2txt.process(r'{}\{}'.format(pasta, relatorio))
         
-        valores = findall('R\$ (\d+\.\d+\,\d+)', texto)#valores
         base_relatorios = pd.concat([base_relatorios, base_word(texto)], ignore_index=True)
     
     except:
